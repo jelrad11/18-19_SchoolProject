@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class p_movement : MonoBehaviour {
+    public int Score;
     public float HP = 100f;
     RaycastHit hit;
     public float distance;
@@ -21,14 +22,16 @@ public class p_movement : MonoBehaviour {
     public bool Attack = false;
     public float AttackDistance;
     public float minDistanceToUse;
-    public GraphicRaycaster m_Raycaster;
+    GraphicRaycaster m_Raycaster;
     PointerEventData m_PointerEventData;
     public EventSystem m_EventSystem;
+    public RobotRistos robotRistos;
 
     // Use this for initialization
     void Start () {
         MeshAgent = GetComponent<NavMeshAgent>();
         m_EventSystem = GetComponent<EventSystem>();
+        m_Raycaster = GetComponent<RoadRotate>().UIPrefab.transform.parent.GetComponent<GraphicRaycaster>();
 	}
 	
 	// Update is called once per frame
