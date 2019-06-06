@@ -3132,7 +3132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeTrigger: {fileID: 724628695}
   volumeLayer:
-    serializedVersion: 2
     m_Bits: 2048
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 1
@@ -3142,6 +3141,9 @@ MonoBehaviour:
     sharpness: 0.25
     stationaryBlending: 0.95
     motionBlending: 0.85
+    <jitter>k__BackingField: {x: 0, y: 0}
+    m_ResetHistory: 1
+    <sampleIndex>k__BackingField: 0
   subpixelMorphologicalAntialiasing:
     quality: 2
   fastApproximateAntialiasing:
@@ -3150,21 +3152,36 @@ MonoBehaviour:
   fog:
     enabled: 1
     excludeSkybox: 1
+  dithering:
+    m_NoiseTextureIndex: 0
   debugLayer:
     lightMeter:
+      <output>k__BackingField: {fileID: 0}
+      requested: 0
       width: 512
       height: 256
       showCurves: 1
     histogram:
+      <output>k__BackingField: {fileID: 0}
+      requested: 0
       width: 512
       height: 256
       channel: 3
     waveform:
+      <output>k__BackingField: {fileID: 0}
+      requested: 0
       exposure: 0.12
       height: 256
     vectorscope:
+      <output>k__BackingField: {fileID: 0}
+      requested: 0
       size: 256
       exposure: 0.12
+    frameWidth: 0
+    frameHeight: 0
+    <debugOverlayTarget>k__BackingField: {fileID: 0}
+    <debugOverlayActive>k__BackingField: 0
+    <debugOverlay>k__BackingField: 0
     overlaySettings:
       linearDepth: 0
       motionColorIntensity: 4
@@ -3178,6 +3195,11 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+  <haveBundlesBeenInited>k__BackingField: 0
+  m_Camera: {fileID: 0}
+  m_SettingsUpdateNeeded: 1
+  m_IsRenderingInSceneView: 0
+  m_NaNKilled: 0
 --- !u!1001 &748197362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10783,7 +10805,7 @@ PrefabInstance:
     - target: {fileID: 5784842595909663257, guid: d7216494830685742ad29c49bf79f75a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.78
+      value: 3.45
       objectReference: {fileID: 0}
     - target: {fileID: 5784842595909663257, guid: d7216494830685742ad29c49bf79f75a,
         type: 3}
@@ -11170,7 +11192,7 @@ PrefabInstance:
     - target: {fileID: 5784842595909663257, guid: d7216494830685742ad29c49bf79f75a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.83
+      value: 3.176
       objectReference: {fileID: 0}
     - target: {fileID: 5784842595909663257, guid: d7216494830685742ad29c49bf79f75a,
         type: 3}
